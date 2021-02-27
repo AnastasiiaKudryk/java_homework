@@ -1,5 +1,10 @@
 package homework_7;
 
+/**
+ * 12 month of the year
+ * days - number of days in month
+ * season - season of the month
+ */
 public enum Month {
     JANUARY(31, Seasons.WINTER),
     FEBRUARY(28, Seasons.WINTER),
@@ -20,10 +25,6 @@ public enum Month {
     Month(int days, Seasons season) {
         this.days = days;
         this.season = season;
-    }
-
-    Month() {
-
     }
 
     public Seasons getSeason() {

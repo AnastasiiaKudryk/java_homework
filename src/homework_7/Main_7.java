@@ -17,12 +17,15 @@ public class Main_7 {
         System.out.println("9 - вивести всі місяці, які мають парну кількість днів");
         System.out.println("10 - вивести, чи має місяць парну кількість днів");
 
-        Month [] months = Month.values();
-        Seasons [] seasons = Seasons.values();
         Scanner scanner = new Scanner(System.in);
+        //num - number from menu
         int num=scanner.nextInt();
 
+        Month [] months = Month.values();
+        Seasons [] seasons = Seasons.values();
+
         switch (num){
+            //check if such month exsists
             case 1: {
                 System.out.println("Введіть місяць: ");
                 String newMonth = scanner.next();
@@ -40,6 +43,7 @@ public class Main_7 {
                     }
             }
             break;
+            //months with the same season
             case 2:{
                 System.out.println("Введіть місяць: ");
                 String newMonth = scanner.next();
@@ -57,6 +61,7 @@ public class Main_7 {
 
             }
             break;
+            //months with the same number of days
             case 3:{
                 System.out.println("Введіть місяць: ");
                 String newMonth = scanner.next();
@@ -72,6 +77,7 @@ public class Main_7 {
                     }
                 }            }
             break;
+            //months that have less days
             case 4: {
                 System.out.println("Введіть місяць: ");
                 String newMonth= scanner.next();
@@ -88,6 +94,7 @@ public class Main_7 {
                 }
             }
             break;
+            //month that have more days
             case 5:{
                 System.out.println("Введіть місяць: ");
                 String newMonth= scanner.next();
@@ -104,6 +111,7 @@ public class Main_7 {
                 }
             }
             break;
+            //next season
             case 6:{
                 System.out.println("Введіть пору року: ");
                 String newSeason = scanner.next();
@@ -119,6 +127,7 @@ public class Main_7 {
                 }
             }
             break;
+            //previous season
             case 7: {
                 System.out.println("Введіть пору року: ");
                 String newSeason = scanner.next();
@@ -134,6 +143,7 @@ public class Main_7 {
                 }
             }
             break;
+            //month with odd number of days
             case 8:{
                 for (Month month : Month.values()){
                     if(month.getDays()%2!=0){
@@ -141,6 +151,7 @@ public class Main_7 {
                     }
                 }            }
             break;
+            //months with even number of days
             case 9:{
                 for (Month month : Month.values()){
                     if(month.getDays()%2==0){
@@ -149,6 +160,7 @@ public class Main_7 {
                 }
             }
             break;
+            //check if month has even number of days
             case 10: {
                 System.out.println("Введіть місяць: ");
                 String newMonth = scanner.next();

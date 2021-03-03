@@ -8,34 +8,32 @@ public class Main_9_2 {
 
         int n=4;
         String[] words = new String[n];
-        int [] length = new int[n];
         int maxLength;
         int minLength;
 
         for(int i=0; i<n; i++) {
             System.out.println("Enter a word: ");
             words[i] = scanner.next();
-            length[i] = words[i].length();
         }
 
-        maxLength=length[0];
-        minLength=length[0];
+        maxLength=words[0].length();
+        minLength=words[0].length();
 
         for(int i=0; i<n; i++){
-            if(length[i]>maxLength){
-                maxLength=length[i];
+            if(words[i].length()>maxLength){
+                maxLength=words[i].length();
             }
-            if(length[i]<minLength){
-                minLength=length[i];
+            if(words[i].length()<minLength){
+                minLength=words[i].length();
             }
         }
 
         for(int i=0; i<n; i++){
             if(words[i].length()==maxLength){
-                System.out.println("Word №"+i+" has maximum length");
+                System.out.println("Word №"+(i+1)+" has maximum length");
             }
             if(words[i].length()==minLength){
-                System.out.println("Word №"+i+" has minimum length");
+                System.out.println("Word №"+(i+1)+" has minimum length");
             }
         }
     }

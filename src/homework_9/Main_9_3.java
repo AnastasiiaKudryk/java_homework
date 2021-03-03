@@ -16,7 +16,7 @@ public class Main_9_3 {
 
         System.out.println("Words which start with 'a' and have even number of symbols:");
         for(int i=0; i<n; i++){
-            if((words[i].startsWith("a")==true)&&(words[i].length()%2==0)){
+            if(words[i].startsWith("a")&&words[i].length()%2==0){
                 System.out.println(words[i]);
             }
         }

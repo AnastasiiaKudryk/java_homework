@@ -66,14 +66,5 @@ public class Main_12 {
         for(Commodity commodity: treeSet){
             System.out.println(commodity.toString());
         }
-
-        List<Commodity> sortedTreeSet = new ArrayList<>(treeSet);
-        Collections.sort(sortedTreeSet);
-
-        System.out.println("Sorted TreeSet:");
-        for(Commodity commodity: sortedTreeSet){
-            System.out.println(commodity.toString());
-        }
-        System.out.println();
     }
 }

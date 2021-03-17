@@ -16,44 +16,44 @@ public class Main_11 {
                 case 1: {
                     addCommodity(commodities);
                     show(commodities);
+                    break;
                 }
-                break;
                 case 2: {
                     removeCommodity(commodities);
                     show(commodities);
+                    break;
                 }
-                break;
                 case 3: {
                     changeCommodity(commodities);
                     show(commodities);
+                    break;
                 }
-                break;
                 case 4:{
                     Collections.sort(commodities,new NameComperator());
                     show(commodities);
+                    break;
                 }
-                break;
                 case 5:{
                     Collections.sort(commodities,new LengthComperator());
                     show(commodities);
+                    break;
                 }
-                break;
                 case 6:{
                     Collections.sort(commodities,new WidthComperator());
                     show(commodities);
+                    break;
                 }
-                break;
                 case 7:{
                     Collections.sort(commodities,new WeightComperator());
                     show(commodities);
+                    break;
                 }
-                break;
                 case 8:{
                     System.out.println("Enter index:");
                     int index = scanner.nextInt();
                     System.out.println(commodities.get(index));
+                    break;
                 }
-                break;
                 case 9: {
                     System.exit(0);
                 }

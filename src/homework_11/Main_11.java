@@ -4,6 +4,56 @@ import java.util.*;
 public class Main_11 {
     public static void main(String[] args) {
 
+        Comparator <Commodity> nameComparator = new Comparator<Commodity>() {
+            @Override
+            public int compare(Commodity o1, Commodity o2) {
+                return 0;
+            }
+        };
+
+        Comparator <Commodity> lengthComparator = new Comparator<Commodity>(){
+            @Override
+            public int compare(Commodity o1, Commodity o2) {
+                if(o1.getLength()>o2.getLength()){
+                    return 1;
+                }
+                else if(o1.getLength()<o2.getLength()){
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            }
+        };
+
+        Comparator <Commodity> widthComparator = new Comparator<Commodity>() {
+            @Override
+            public int compare(Commodity o1, Commodity o2) {
+                if (o1.getWidth() > o2.getWidth()) {
+                    return 1;
+                } else if (o1.getWidth() < o2.getWidth()) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        };
+
+        Comparator <Commodity> weightComparator = new Comparator<Commodity>() {
+            @Override
+            public int compare(Commodity o1, Commodity o2) {
+                if(o1.getWeight()>o2.getWeight()){
+                    return 1;
+                }
+                else if(o1.getWeight()<o2.getWeight()){
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            }
+        };
+
         Scanner scanner = new Scanner(System.in);
         List<Commodity> commodities = new ArrayList<>(Arrays.asList());
 
@@ -29,22 +79,22 @@ public class Main_11 {
                     break;
                 }
                 case 4:{
-                    Collections.sort(commodities,new NameComperator());
+                    Collections.sort(commodities, nameComparator);
                     show(commodities);
                     break;
                 }
                 case 5:{
-                    Collections.sort(commodities,new LengthComperator());
+                    Collections.sort(commodities,lengthComparator);
                     show(commodities);
                     break;
                 }
                 case 6:{
-                    Collections.sort(commodities,new WidthComperator());
+                    Collections.sort(commodities,widthComparator);
                     show(commodities);
                     break;
                 }
                 case 7:{
-                    Collections.sort(commodities,new WeightComperator());
+                    Collections.sort(commodities,weightComparator);
                     show(commodities);
                     break;
                 }

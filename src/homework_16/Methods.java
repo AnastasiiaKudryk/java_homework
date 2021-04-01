@@ -2,18 +2,12 @@ package homework_16;
 
 import java.io.*;
 
-public class Methods {
+public class Methods<E> {
 
-    private Employee employee;
-
-    public Methods(Employee employee) {
-        this.employee = employee;
-    }
-
-    public void serealize(){
+    public static <E> void serealize(E employee, String filePath){
         String currentDir = System.getProperty("user.dir");
 
-        try(FileOutputStream fileOutputStream = new FileOutputStream(currentDir+"/src/homework_16/Output.txt");
+        try(FileOutputStream fileOutputStream = new FileOutputStream(currentDir+filePath);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream))
         {
             objectOutputStream.writeObject(employee);
@@ -23,14 +17,14 @@ public class Methods {
         }
     }
 
-    public void deserealize(){
+    public static <E> void deserealize(String filePath){
         String currentDir = System.getProperty("user.dir");
-        Employee newEmployee;
+        E newEmployee;
 
-        try(FileInputStream fileInputStream = new FileInputStream(currentDir+"/src/homework_16/Output.txt");
+        try(FileInputStream fileInputStream = new FileInputStream(currentDir+filePath);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream))
         {
-            newEmployee = (Employee) objectInputStream.readObject();
+            newEmployee = (E) objectInputStream.readObject();
             System.out.println(newEmployee.toString());
         }
         catch (IOException | ClassNotFoundException e){

@@ -6,29 +6,27 @@ import java.util.List;
 public class Main_16 {
     public static void main(String[] args) {
 
-        Employee employee1 = new Employee("Bob", 343322, 7639);
-        Methods method1 = new Methods(employee1);
+        String filePath = "/src/homework_16/Output.txt";
 
-        method1.serealize();
-        method1.deserealize();
+        Employee employee1 = new Employee("Bob", 343322, 7639);
+
+        Methods.serealize(employee1, filePath);
+        Methods.deserealize(filePath);
 
         Employee employee2 = new Employee("Sam", 764322, 2345);
         Employee employee3 = new Employee("Mark", 887654, 4567);
-        Methods method2;
 
         List<Employee> employees = Arrays.asList(employee1, employee2, employee3);
         for(Employee employee : employees){
-            method2 = new Methods(employee);
-            method2.serealize();
-            method2.deserealize();
+            Methods.serealize(employee, filePath);
+            Methods.deserealize(filePath);
         }
 
         Salary salary = new Salary(234, 2349876);
         Employee employee4 = new Employee("Tom", 459823, salary);
-        Methods method3 = new Methods(employee4);
 
-        method3.serealize();
-        method3.deserealize();
+        Methods.serealize(employee4, filePath);
+        Methods.deserealize(filePath);
     }
 }
 
